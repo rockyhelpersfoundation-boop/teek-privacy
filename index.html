@@ -3,74 +3,576 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Teek Profile — Privacy Policy</title>
+<title>Privacy Policy — Teek</title>
+<meta name="description" content="Teek is a 100% offline app. Your data never leaves your device.">
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-         max-width: 800px; margin: 40px auto; padding: 20px;
-         line-height: 1.7; color: #333; background: #fafafa; }
-  h1 { color: #6C63FF; font-size: 32px; }
-  h2 { margin-top: 32px; color: #6C63FF; font-size: 20px; }
-  p { font-size: 15px; }
-  .updated { color: #888; font-size: 14px; }
-  .callout { background: #f5f4ff; padding: 20px; border-left: 4px solid #6C63FF;
-             border-radius: 4px; margin: 20px 0; font-size: 15px; }
-  .footer { margin-top: 60px; text-align: center; color: #888; font-size: 13px; }
-  @media (max-width: 600px) {
-    body { margin: 20px auto; padding: 16px; }
-    h1 { font-size: 24px; }
+  :root {
+    --accent: #8B5CF6;
+    --accent-2: #6C63FF;
+    --accent-soft: #F5F4FF;
+    --accent-soft-2: #EEF0FF;
+    --text: #0F1419;
+    --dim: #536471;
+    --dim-2: #8899A6;
+    --divider: #EFF3F4;
+    --bg: #FFFFFF;
+    --bg-alt: #FAFBFC;
+    --success: #10B981;
+    --card-shadow: 0 1px 3px rgba(15, 20, 25, 0.04), 0 1px 2px rgba(15, 20, 25, 0.06);
+    --card-shadow-hover: 0 4px 12px rgba(139, 92, 246, 0.08), 0 2px 6px rgba(15, 20, 25, 0.06);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
+    background: var(--bg-alt);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent) 50%, #4834D4 100%);
+    padding: 80px 24px 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.15) 0%, transparent 40%),
+                radial-gradient(circle at 70% 80%, rgba(255,255,255,0.1) 0%, transparent 40%);
+    pointer-events: none;
+  }
+  .hero-logo {
+    width: 72px; height: 72px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    font-size: 34px;
+    font-weight: 800;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  }
+  .hero h1 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 17px;
+    font-weight: 500;
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-updated {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 6px 16px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 100px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ============ CONTAINER ============ */
+  .container {
+    max-width: 780px;
+    margin: -60px auto 0;
+    padding: 0 20px 60px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ============ TRUST BADGES ============ */
+  .trust-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .trust-badge {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px 12px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(15, 20, 25, 0.04);
+  }
+  .trust-badge .icon {
+    width: 40px; height: 40px;
+    background: linear-gradient(135deg, var(--accent-2), var(--accent));
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .trust-badge .label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.2px;
+  }
+  .trust-badge .sub {
+    display: block;
+    font-size: 11px;
+    color: var(--dim-2);
+    font-weight: 500;
+    margin-top: 2px;
+  }
+
+  /* ============ CALLOUT ============ */
+  .callout {
+    background: linear-gradient(135deg, var(--accent-soft), var(--accent-soft-2));
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    border-radius: 20px;
+    padding: 24px 26px;
+    margin-bottom: 32px;
+    position: relative;
+  }
+  .callout-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px; height: 32px;
+    background: var(--accent);
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .callout h3 {
+    color: var(--accent);
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+  .callout p {
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ============ TOC ============ */
+  .toc {
+    background: #fff;
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 32px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(15, 20, 25, 0.04);
+  }
+  .toc-title {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--dim-2);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 16px;
+  }
+  .toc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 20px;
+  }
+  .toc-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.15s;
+  }
+  .toc-item:hover { color: var(--accent); }
+  .toc-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 800;
+  }
+
+  /* ============ SECTION CARD ============ */
+  .section {
+    background: #fff;
+    border-radius: 18px;
+    padding: 24px 26px;
+    margin-bottom: 16px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(15, 20, 25, 0.04);
+    transition: box-shadow 0.2s, transform 0.2s;
+    scroll-margin-top: 24px;
+  }
+  .section:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+  }
+  .section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+  .section-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--accent-2), var(--accent));
+    color: #fff;
+    border-radius: 11px;
+    font-size: 14px;
+    font-weight: 800;
+    box-shadow: 0 4px 10px rgba(139, 92, 246, 0.25);
+    flex-shrink: 0;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.3px;
+    padding-top: 6px;
+  }
+  .section p {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.7;
+    padding-left: 50px;
+  }
+  .section p + p { margin-top: 12px; }
+  .section ul {
+    padding-left: 50px;
+    margin-top: 12px;
+  }
+  .section ul li {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 6px;
+    list-style: none;
+    position: relative;
+    padding-left: 20px;
+  }
+  .section ul li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 11px;
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  /* ============ SPECIAL CARDS ============ */
+  .highlight-card {
+    background: linear-gradient(135deg, #ECFDF5, #F0FDF4);
+    border: 1px solid rgba(16, 185, 129, 0.15);
+  }
+  .highlight-card .section-num {
+    background: linear-gradient(135deg, #10B981, #059669);
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.25);
+  }
+
+  /* ============ FOOTER ============ */
+  .footer {
+    text-align: center;
+    padding: 40px 20px 60px;
+    color: var(--dim-2);
+    font-size: 13px;
+  }
+  .footer .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+    font-weight: 800;
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  .footer .brand-icon {
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, var(--accent-2), var(--accent));
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 15px;
+  }
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 16px 0;
+    flex-wrap: wrap;
+  }
+  .footer-links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+  }
+  .footer-links a:hover { text-decoration: underline; }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 640px) {
+    .hero { padding: 60px 20px 80px; }
+    .hero h1 { font-size: 30px; }
+    .hero p { font-size: 15px; }
+    .container { margin-top: -50px; padding: 0 16px 40px; }
+    .trust-row { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .trust-badge { padding: 16px 8px; }
+    .trust-badge .label { font-size: 11px; }
+    .trust-badge .sub { display: none; }
+    .section { padding: 20px; }
+    .section p, .section ul { padding-left: 0; margin-top: 10px; }
+    .section h2 { font-size: 16px; }
+    .toc-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
-<h1>Privacy Policy</h1>
-<p class="updated">Last updated: January 2026</p>
 
-<div class="callout">
-<strong>Teek Profile is 100% offline.</strong> We do not collect, transmit, sell, or share your personal information. Everything you create stays on your device.
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-logo">T</div>
+  <h1>Privacy Policy</h1>
+  <p>Teek is built on a simple promise — your data stays on your device. No servers. No tracking. No exceptions.</p>
+  <span class="hero-updated">Last updated: January 2026</span>
+</section>
+
+<!-- ============ CONTAINER ============ -->
+<div class="container">
+
+  <!-- TRUST BADGES -->
+  <div class="trust-row">
+    <div class="trust-badge">
+      <div class="icon">🔒</div>
+      <span class="label">100% Offline</span>
+      <span class="sub">No internet</span>
+    </div>
+    <div class="trust-badge">
+      <div class="icon">🚫</div>
+      <span class="label">Zero Tracking</span>
+      <span class="sub">No analytics</span>
+    </div>
+    <div class="trust-badge">
+      <div class="icon">🛡️</div>
+      <span class="label">No Servers</span>
+      <span class="sub">We can't see you</span>
+    </div>
+  </div>
+
+  <!-- CALLOUT -->
+  <div class="callout">
+    <div class="callout-icon">✨</div>
+    <h3>The Simple Truth</h3>
+    <p>Teek does not collect, transmit, sell, or share your personal information with anyone. Everything you create stays on your device — permanently, privately, yours.</p>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <div class="toc-grid">
+      <a href="#s1" class="toc-item"><span class="toc-num">1</span> Overview</a>
+      <a href="#s2" class="toc-item"><span class="toc-num">2</span> What We Don't Collect</a>
+      <a href="#s3" class="toc-item"><span class="toc-num">3</span> Local Storage</a>
+      <a href="#s4" class="toc-item"><span class="toc-num">4</span> Photo Access</a>
+      <a href="#s5" class="toc-item"><span class="toc-num">5</span> Camera Access</a>
+      <a href="#s6" class="toc-item"><span class="toc-num">6</span> PDF &amp; QR Sharing</a>
+      <a href="#s7" class="toc-item"><span class="toc-num">7</span> Security Features</a>
+      <a href="#s8" class="toc-item"><span class="toc-num">8</span> Third-Party Services</a>
+      <a href="#s9" class="toc-item"><span class="toc-num">9</span> Internet Permission</a>
+      <a href="#s10" class="toc-item"><span class="toc-num">10</span> Children's Privacy</a>
+      <a href="#s11" class="toc-item"><span class="toc-num">11</span> Your Rights</a>
+      <a href="#s12" class="toc-item"><span class="toc-num">12</span> Data Deletion</a>
+      <a href="#s13" class="toc-item"><span class="toc-num">13</span> Policy Changes</a>
+      <a href="#s14" class="toc-item"><span class="toc-num">14</span> Contact</a>
+    </div>
+  </div>
+
+  <!-- SECTIONS -->
+  <div class="section" id="s1">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2>Overview</h2>
+    </div>
+    <p>Teek is built with a privacy-first philosophy. The app runs entirely offline on your device. We do not have servers, databases, or cloud storage. We cannot see your data even if we wanted to.</p>
+  </div>
+
+  <div class="section" id="s2">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2>Information We Do NOT Collect</h2>
+    </div>
+    <p>Teek does not collect, request, or store any of the following:</p>
+    <ul>
+      <li>Names, emails, or phone numbers</li>
+      <li>Profile photos or any images you upload</li>
+      <li>Work experience, education, or skills</li>
+      <li>Location or GPS data</li>
+      <li>Contacts or phone book access</li>
+      <li>PINs or security credentials</li>
+      <li>Device identifiers or advertising IDs</li>
+      <li>Usage analytics, crash reports, or telemetry</li>
+      <li>Any data transmitted over the internet</li>
+    </ul>
+  </div>
+
+  <div class="section" id="s3">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2>Data Storage — 100% On Your Device</h2>
+    </div>
+    <p>All information you enter is stored locally using an encrypted SQLite database inside your device's private app storage. This includes profile information, work history, education, skills, contact details, photos, and your 4-digit PIN — which is hashed with SHA-256 and never stored in plain text.</p>
+  </div>
+
+  <div class="section" id="s4">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2>Photo Access</h2>
+    </div>
+    <p>Photo gallery access is used solely to select a profile picture. The selected image is copied into the app's private storage and is never uploaded, shared, or transmitted anywhere.</p>
+  </div>
+
+  <div class="section" id="s5">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h2>Camera Access</h2>
+    </div>
+    <p>The camera is used only when you choose to scan a QR code. Camera frames are processed entirely on your device and are never recorded, stored, or transmitted.</p>
+  </div>
+
+  <div class="section" id="s6">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <h2>PDF &amp; QR Sharing</h2>
+    </div>
+    <p>When you share a PDF or QR code, you have complete control over what is included. Nothing is uploaded to any server. Sharing happens through your device's native share sheet — whether it's WhatsApp, email, Bluetooth, or another app you choose.</p>
+  </div>
+
+  <div class="section" id="s7">
+    <div class="section-header">
+      <div class="section-num">7</div>
+      <h2>Security Features</h2>
+    </div>
+    <p>Teek includes an optional 4-digit PIN lock. Your PIN is hashed with SHA-256 before storage, screenshots are blocked inside the app, and the app is hidden from the recent apps list. Your profiles stay protected even if someone gains access to your unlocked phone.</p>
+  </div>
+
+  <div class="section" id="s8">
+    <div class="section-header">
+      <div class="section-num">8</div>
+      <h2>Third-Party Services</h2>
+    </div>
+    <p>Teek does NOT use Google Analytics, Firebase, Facebook SDK, or any advertising, tracking, or crash-reporting tools. There are no third-party SDKs in this app that transmit your data anywhere.</p>
+  </div>
+
+  <div class="section" id="s9">
+    <div class="section-header">
+      <div class="section-num">9</div>
+      <h2>Internet Permission</h2>
+    </div>
+    <p>Teek does not request the Android INTERNET permission. This is a technical guarantee that the app cannot transmit your data anywhere — even accidentally, even if it wanted to.</p>
+  </div>
+
+  <div class="section highlight-card" id="s10">
+    <div class="section-header">
+      <div class="section-num">10</div>
+      <h2>Children's Privacy</h2>
+    </div>
+    <p>Teek is fully compliant with COPPA and similar regulations worldwide. Because the app collects no data at all, it is safe for users of any age.</p>
+  </div>
+
+  <div class="section" id="s11">
+    <div class="section-header">
+      <div class="section-num">11</div>
+      <h2>Your Rights (GDPR / CCPA)</h2>
+    </div>
+    <p>Because we collect no data on any server, there is nothing for us to access, correct, or delete. You have complete control of your information by default — permanently and unconditionally.</p>
+  </div>
+
+  <div class="section" id="s12">
+    <div class="section-header">
+      <div class="section-num">12</div>
+      <h2>Data Deletion</h2>
+    </div>
+    <p>To delete all Teek data, simply delete individual profiles inside the app, or uninstall the app. Uninstalling removes the app's private database and all associated files. There is no cloud backup to worry about — because there is no cloud.</p>
+  </div>
+
+  <div class="section" id="s13">
+    <div class="section-header">
+      <div class="section-num">13</div>
+      <h2>Changes to This Policy</h2>
+    </div>
+    <p>If we ever update this privacy policy, the new version will be included in the next app update and will show a revised "Last updated" date at the top of this page.</p>
+  </div>
+
+  <div class="section" id="s14">
+    <div class="section-header">
+      <div class="section-num">14</div>
+      <h2>Contact</h2>
+    </div>
+    <p>For any questions about this privacy policy, please reach out:<br><br>
+    <strong>Email:</strong> privacy@teek.app<br>
+    <strong>Developer:</strong> Teek</p>
+  </div>
+
 </div>
 
-<h2>1. Overview</h2>
-<p>Teek Profile is built with a privacy-first philosophy. The app runs entirely offline on your device. We do not have servers, databases, or cloud storage. We cannot see your data even if we wanted to.</p>
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="brand">
+    <span class="brand-icon">T</span>
+    <span>Teek</span>
+  </div>
+  <div class="footer-links">
+    <a href="#s1">Privacy</a>
+    <a href="https://github.com/rockyhelpersfoundation-boop/teek-privacy">Source</a>
+  </div>
+  <p>© 2026 Teek · Made with ❤️ in Nigeria</p>
+</footer>
 
-<h2>2. Information We Do NOT Collect</h2>
-<p>Teek Profile does not collect: names, emails, phone numbers, photos, work experience, education, skills, location, contacts, PINs, device identifiers, analytics, or any data transmitted over the internet.</p>
-
-<h2>3. Data Storage — 100% On Your Device</h2>
-<p>All information is stored locally using an encrypted SQLite database. This includes profile information, work history, education, skills, contact details, photos, and your 4-digit PIN (hashed with SHA-256).</p>
-
-<h2>4. Photo Access</h2>
-<p>Photo gallery access is used only to select a profile picture. The selected image is copied into the app's private storage and never uploaded anywhere.</p>
-
-<h2>5. Camera Access</h2>
-<p>The camera is used only to scan QR codes. Camera frames are processed locally and never recorded, stored, or transmitted.</p>
-
-<h2>6. PDF &amp; QR Sharing</h2>
-<p>When you share a PDF or QR code, you control exactly what is included. Nothing is uploaded. Sharing happens through your device's native share sheet.</p>
-
-<h2>7. Security Features</h2>
-<p>Teek Profile includes an optional PIN lock (SHA-256 hashed), screenshot blocking, and app-hidden-from-recents for enhanced security.</p>
-
-<h2>8. Third-Party Services</h2>
-<p>Teek Profile does NOT use Google Analytics, Firebase, Facebook SDK, or any advertising or tracking tools.</p>
-
-<h2>9. Internet Permission</h2>
-<p>Teek Profile does not request the Android INTERNET permission. It cannot transmit your data anywhere, even accidentally.</p>
-
-<h2>10. Children's Privacy</h2>
-<p>Compliant with COPPA. Teek Profile collects no data at all.</p>
-
-<h2>11. Your Rights (GDPR / CCPA)</h2>
-<p>Because we collect no data, there is nothing for us to access, correct, or delete. You have full control by default.</p>
-
-<h2>12. Data Deletion</h2>
-<p>Delete individual profiles in the app, or uninstall the app to remove all data. There is no cloud backup to worry about.</p>
-
-<h2>13. Changes to This Policy</h2>
-<p>Updates will appear in new app versions with a revised date.</p>
-
-<h2>14. Contact</h2>
-<p>Email: privacy@teek.app<br>Developer: Teek</p>
-
-<p class="footer">© 2026 Teek · Made with ❤️ in Nigeria</p>
 </body>
 </html>
