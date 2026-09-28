@@ -421,15 +421,16 @@
       <a href="#s3" class="toc-item"><span class="toc-num">3</span> Local Storage</a>
       <a href="#s4" class="toc-item"><span class="toc-num">4</span> Photo Access</a>
       <a href="#s5" class="toc-item"><span class="toc-num">5</span> Camera Access</a>
-      <a href="#s6" class="toc-item"><span class="toc-num">6</span> PDF &amp; QR Sharing</a>
-      <a href="#s7" class="toc-item"><span class="toc-num">7</span> Security Features</a>
-      <a href="#s8" class="toc-item"><span class="toc-num">8</span> Third-Party Services</a>
-      <a href="#s9" class="toc-item"><span class="toc-num">9</span> Internet Permission</a>
-      <a href="#s10" class="toc-item"><span class="toc-num">10</span> Children's Privacy</a>
-      <a href="#s11" class="toc-item"><span class="toc-num">11</span> Your Rights</a>
-      <a href="#s12" class="toc-item"><span class="toc-num">12</span> Data Deletion</a>
-      <a href="#s13" class="toc-item"><span class="toc-num">13</span> Policy Changes</a>
-      <a href="#s14" class="toc-item"><span class="toc-num">14</span> Contact</a>
+      <a href="#s6" class="toc-item"><span class="toc-num">6</span> Reading Time</a>
+      <a href="#s7" class="toc-item"><span class="toc-num">7</span> PDF &amp; QR Sharing</a>
+      <a href="#s8" class="toc-item"><span class="toc-num">8</span> Security &amp; PIN</a>
+      <a href="#s9" class="toc-item"><span class="toc-num">9</span> Drafts &amp; Auto-Save</a>
+      <a href="#s10" class="toc-item"><span class="toc-num">10</span> Third-Party Services</a>
+      <a href="#s11" class="toc-item"><span class="toc-num">11</span> No Internet Permission</a>
+      <a href="#s12" class="toc-item"><span class="toc-num">12</span> Children's Privacy</a>
+      <a href="#s13" class="toc-item"><span class="toc-num">13</span> Your Rights</a>
+      <a href="#s14" class="toc-item"><span class="toc-num">14</span> Data Deletion</a>
+      <a href="#s15" class="toc-item"><span class="toc-num">15</span> Contact</a>
     </div>
   </div>
 
@@ -452,10 +453,10 @@
       <li>Names, emails, or phone numbers</li>
       <li>Profile photos or any images you upload</li>
       <li>Work experience, education, or skills</li>
-      <li>Your courses, sections, or reading activity</li>
-      <li>Location or GPS data</li>
-      <li>Contacts or phone book access</li>
-      <li>PINs or security credentials</li>
+      <li>Your notes, courses, sections, or reading activity</li>
+      <li>Your location or GPS data</li>
+      <li>Your contacts or phone book</li>
+      <li>Your PIN or any security credentials</li>
       <li>Device identifiers or advertising IDs</li>
       <li>Usage analytics, crash reports, or telemetry</li>
       <li>Any data transmitted over the internet</li>
@@ -467,8 +468,17 @@
       <div class="section-num">3</div>
       <h2>Data Storage — 100% On Your Device</h2>
     </div>
-    <p>All information you enter is stored locally using an encrypted SQLite database inside your device's private app storage. This includes profile information, work history, education, skills, contact details, photos, notes, courses, sections, reading progress, and your 4-digit PIN — which is hashed with SHA-256 and never stored in plain text.</p>
-    <p>Reading time is tracked locally while you are inside a section. This data is saved only to your device and is never transmitted.</p>
+    <p>All information you enter is stored locally inside your device's private app storage using SQLite. This includes:</p>
+    <ul>
+      <li>Profile information (names, titles, bios, photos)</li>
+      <li>Work experience, education, and skills</li>
+      <li>Recommendations, certifications, projects, and languages</li>
+      <li>Notes you write</li>
+      <li>Courses and sections you create</li>
+      <li>Reading time tracked while you are inside a section</li>
+      <li>Your 4-digit PIN (stored as a SHA-256 hash, never in plain text)</li>
+    </ul>
+    <p>This data never leaves your device unless you explicitly choose to share it (e.g., exporting a PDF or showing a QR code).</p>
   </div>
 
   <div class="section" id="s4">
@@ -476,7 +486,8 @@
       <div class="section-num">4</div>
       <h2>Photo Access</h2>
     </div>
-    <p>Photo gallery access is used solely to select a profile picture. The selected image is copied into the app's private storage and is never uploaded, shared, or transmitted anywhere.</p>
+    <p>Teek uses your device's photo picker only when you tap "Add Photo" in a profile. This access is used solely to select an image you want to use as your profile picture. The selected photo is copied into the app's private storage and is never uploaded anywhere.</p>
+    <p>Teek does not request photo access at any other time.</p>
   </div>
 
   <div class="section" id="s5">
@@ -484,81 +495,138 @@
       <div class="section-num">5</div>
       <h2>Camera Access</h2>
     </div>
-    <p>The camera is used only when you choose to scan a QR code. Camera frames are processed entirely on your device and are never recorded, stored, or transmitted.</p>
+    <p>Teek uses your device camera only when you tap "Scan QR Code". Camera frames are processed locally on your device and are never recorded, stored, or transmitted.</p>
+    <p>Teek does not request camera access at any other time.</p>
   </div>
 
   <div class="section" id="s6">
     <div class="section-header">
       <div class="section-num">6</div>
-      <h2>PDF &amp; QR Sharing</h2>
+      <h2>Reading Time Tracking</h2>
     </div>
-    <p>When you share a PDF or QR code, you have complete control over what is included. Nothing is uploaded to any server. Sharing happens through your device's native share sheet — whether it's WhatsApp, email, Bluetooth, or another app you choose.</p>
+    <p>When you are inside a section (a page of a course), Teek measures how long you spend reading. This is used to show you your reading progress and total study time.</p>
+    <ul>
+      <li>This data is stored only on your device</li>
+      <li>It is never transmitted anywhere</li>
+      <li>Reading pauses automatically when you leave the app</li>
+      <li>You can delete it by deleting the section or course</li>
+    </ul>
   </div>
 
   <div class="section" id="s7">
     <div class="section-header">
       <div class="section-num">7</div>
-      <h2>Security Features</h2>
+      <h2>PDF &amp; QR Sharing</h2>
     </div>
-    <p>Teek includes an optional 4-digit PIN lock to protect your data. Your PIN is hashed with SHA-256 before storage — the original is never saved anywhere. Screenshots are blocked inside the app, and Teek is hidden from your phone's recent apps list. Your profiles, notes, and courses stay protected even if someone gains access to your unlocked phone.</p>
+    <p>You may choose to share your profile as a PDF or as a QR code. When you do:</p>
+    <ul>
+      <li>The PDF file is generated entirely on your device</li>
+      <li>The QR code contains only the information you have chosen to make public</li>
+      <li>You control exactly what is included</li>
+      <li>Nothing is uploaded to any server</li>
+      <li>Sharing happens through your device's native share sheet (WhatsApp, Email, Bluetooth, etc.)</li>
+    </ul>
+    <p>Once you share a file, its privacy is determined by the app or service you share it with.</p>
   </div>
 
   <div class="section" id="s8">
     <div class="section-header">
       <div class="section-num">8</div>
-      <h2>Third-Party Services</h2>
+      <h2>Security Features &amp; PIN</h2>
     </div>
-    <p>Teek does NOT use Google Analytics, Firebase, Facebook SDK, or any advertising, tracking, or crash-reporting tools. There are no third-party SDKs in this app that transmit your data anywhere.</p>
+    <p>Teek includes an optional 4-digit PIN lock. When enabled:</p>
+    <ul>
+      <li>The PIN is hashed using SHA-256 before storage</li>
+      <li>The original PIN is never saved anywhere</li>
+      <li>The app automatically locks when sent to the background</li>
+      <li>Only a correct PIN unlocks your data</li>
+    </ul>
+    <p>This means someone who gains physical access to your unlocked device still cannot easily view your Teek data.</p>
   </div>
 
   <div class="section" id="s9">
     <div class="section-header">
       <div class="section-num">9</div>
-      <h2>Internet Permission</h2>
+      <h2>Drafts &amp; Auto-Save</h2>
     </div>
-    <p>Teek does not request the Android INTERNET permission. This is a technical guarantee that the app cannot transmit your data anywhere — even accidentally, even if it wanted to.</p>
+    <p>While you are writing a note, creating a profile, or creating a course, Teek saves your work-in-progress as a draft on your device. This protects you from losing content if the app is closed unexpectedly.</p>
+    <ul>
+      <li>Drafts are stored only on your device</li>
+      <li>Drafts are cleared automatically when you save</li>
+      <li>You can discard a draft at any time from the dashboard</li>
+      <li>Drafts are never transmitted anywhere</li>
+    </ul>
   </div>
 
-  <div class="section highlight-card" id="s10">
+  <div class="section" id="s10">
     <div class="section-header">
       <div class="section-num">10</div>
-      <h2>Children's Privacy</h2>
+      <h2>Third-Party Services</h2>
     </div>
-    <p>Teek is fully compliant with COPPA and similar regulations worldwide. Because the app collects no data at all, it is safe for users of any age.</p>
+    <p>Teek does NOT use any third-party analytics, advertising, tracking, or crash-reporting services. There are no SDKs from Google Analytics, Firebase, Facebook, or any other tracking provider.</p>
   </div>
 
   <div class="section" id="s11">
     <div class="section-header">
       <div class="section-num">11</div>
-      <h2>Your Rights (GDPR / CCPA)</h2>
+      <h2>Internet Permission</h2>
     </div>
-    <p>Because we collect no data on any server, there is nothing for us to access, correct, or delete. You have complete control of your information by default — permanently and unconditionally.</p>
+    <p>Teek does not request the Android INTERNET permission. This is a technical guarantee that the app cannot transmit your data anywhere — even accidentally. The app works fully in airplane mode.</p>
   </div>
 
-  <div class="section" id="s12">
+  <div class="section highlight-card" id="s12">
     <div class="section-header">
       <div class="section-num">12</div>
-      <h2>Data Deletion</h2>
+      <h2>Children's Privacy</h2>
     </div>
-    <p>To delete all Teek data, simply delete individual profiles, notes, or courses inside the app, or uninstall the app. Uninstalling removes the app's private database and all associated files. There is no cloud backup to worry about — because there is no cloud.</p>
+    <p>Teek does not knowingly collect any personal information from children under 13. Because the app collects no data at all, it is compliant with COPPA (Children's Online Privacy Protection Act) and similar regulations worldwide.</p>
   </div>
 
   <div class="section" id="s13">
     <div class="section-header">
       <div class="section-num">13</div>
-      <h2>Changes to This Policy</h2>
+      <h2>Your Rights (GDPR / CCPA)</h2>
     </div>
-    <p>If we ever update this privacy policy, the new version will be included in the next app update and will show a revised "Last updated" date at the top of this page.</p>
+    <p>Because Teek does not collect or process any personal data on our servers, there is no data for us to access, correct, or delete. All data exists solely on your device and is fully under your control. You can:</p>
+    <ul>
+      <li>Delete any profile, note, or course at any time</li>
+      <li>Export your profile as a PDF at any time</li>
+      <li>Uninstall the app to remove all data</li>
+    </ul>
+    <p>Under GDPR, CCPA, and similar regulations, you have the right to access, correct, and delete your personal data — and Teek gives you those rights by default, permanently.</p>
   </div>
 
   <div class="section" id="s14">
     <div class="section-header">
       <div class="section-num">14</div>
+      <h2>Data Deletion</h2>
+    </div>
+    <p>To delete all Teek data:</p>
+    <ul>
+      <li>Delete individual profiles, notes, or courses inside the app</li>
+      <li>Discard any pending drafts from the dashboard</li>
+      <li>Or uninstall the app from your device</li>
+    </ul>
+    <p>Uninstalling removes the app's private database and all associated files. There is no cloud backup to delete because there is no cloud.</p>
+  </div>
+
+  <div class="section" id="s15">
+    <div class="section-header">
+      <div class="section-num">15</div>
       <h2>Contact</h2>
     </div>
-    <p>For any questions about this privacy policy, please reach out:<br><br>
+    <p>For questions about this privacy policy, contact:<br><br>
     <strong>Email:</strong> teekapp@gmail.com<br>
-    <strong>Developer:</strong> Teek</p>
+    <strong>Developer:</strong> Teek<br><br>
+    We will respond within 7 business days.</p>
+  </div>
+
+  <div class="section" id="s16">
+    <div class="section-header">
+      <div class="section-num">16</div>
+      <h2>Changes to This Policy</h2>
+    </div>
+    <p>If we ever update this privacy policy, the new version will be included in the next app update and will show an updated "Last Updated" date at the top of this page. Continued use of the app after an update constitutes acceptance of the revised policy.</p>
   </div>
 
 </div>
