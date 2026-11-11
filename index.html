@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Teek</title>
-<meta name="description" content="Teek is a 100% offline app. Your data never leaves your device.">
+<meta name="description" content="How Teek collects, uses, and protects your data across social features, offline tools, and account management.">
 <style>
   :root {
     --accent: #8B5CF6;
@@ -35,7 +35,6 @@
     font-size: 16px;
   }
 
-  /* ============ HERO ============ */
   .hero {
     background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent) 50%, #4834D4 100%);
     padding: 80px 24px 100px;
@@ -104,7 +103,6 @@
     z-index: 1;
   }
 
-  /* ============ CONTAINER ============ */
   .container {
     max-width: 780px;
     margin: -60px auto 0;
@@ -113,7 +111,6 @@
     z-index: 2;
   }
 
-  /* ============ TRUST BADGES ============ */
   .trust-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -153,7 +150,6 @@
     margin-top: 2px;
   }
 
-  /* ============ CALLOUT ============ */
   .callout {
     background: linear-gradient(135deg, var(--accent-soft), var(--accent-soft-2));
     border: 1px solid rgba(139, 92, 246, 0.15);
@@ -185,7 +181,6 @@
     line-height: 1.6;
   }
 
-  /* ============ TOC ============ */
   .toc {
     background: #fff;
     border-radius: 20px;
@@ -232,7 +227,6 @@
     font-weight: 800;
   }
 
-  /* ============ SECTION CARD ============ */
   .section {
     background: #fff;
     border-radius: 18px;
@@ -303,7 +297,6 @@
     border-radius: 50%;
   }
 
-  /* ============ SPECIAL CARDS ============ */
   .highlight-card {
     background: linear-gradient(135deg, #ECFDF5, #F0FDF4);
     border: 1px solid rgba(16, 185, 129, 0.15);
@@ -316,8 +309,15 @@
     background: linear-gradient(135deg, #F5F4FF, #EEF0FF);
     border: 1px solid rgba(139, 92, 246, 0.15);
   }
+  .warn-card {
+    background: linear-gradient(135deg, #FEF2F2, #FFF5F5);
+    border: 1px solid rgba(220, 38, 38, 0.15);
+  }
+  .warn-card .section-num {
+    background: linear-gradient(135deg, #DC2626, #B91C1C);
+    box-shadow: 0 4px 10px rgba(220, 38, 38, 0.25);
+  }
 
-  /* ============ FOOTER ============ */
   .footer {
     text-align: center;
     padding: 40px 20px 60px;
@@ -359,7 +359,6 @@
   }
   .footer-links a:hover { text-decoration: underline; }
 
-  /* ============ RESPONSIVE ============ */
   @media (max-width: 640px) {
     .hero { padding: 60px 20px 80px; }
     .hero h1 { font-size: 30px; }
@@ -378,414 +377,295 @@
 </head>
 <body>
 
-<!-- ============ HERO ============ -->
 <section class="hero">
   <div class="hero-logo">T</div>
   <h1>Privacy Policy</h1>
-  <p>Teek is built on a simple promise — your data stays on your device. No servers. No tracking. No exceptions.</p>
-  <span class="hero-updated">Last updated: October 2026</span>
+  <p>Teek combines offline tools with a social platform. Here's exactly what we collect, why, and how you stay in control.</p>
+  <span class="hero-updated">Last updated: November 2026</span>
 </section>
 
-<!-- ============ CONTAINER ============ -->
 <div class="container">
 
-  <!-- TRUST BADGES -->
   <div class="trust-row">
     <div class="trust-badge">
-      <div class="icon"></div>
-      <span class="label">100% Offline</span>
-      <span class="sub">No internet</span>
+      <div class="icon">🔒</div>
+      <span class="label">Encrypted</span>
+      <span class="sub">Passwords hashed</span>
     </div>
     <div class="trust-badge">
-      <div class="icon"></div>
-      <span class="label">Zero Tracking</span>
-      <span class="sub">No analytics</span>
+      <div class="icon">✂️</div>
+      <span class="label">You Control</span>
+      <span class="sub">Delete anytime</span>
     </div>
     <div class="trust-badge">
-      <div class="icon"></div>
-      <span class="label">No Servers</span>
-      <span class="sub">We can't see you</span>
+      <div class="icon">🚫</div>
+      <span class="label">No Tracking</span>
+      <span class="sub">No ad SDKs</span>
     </div>
   </div>
 
-  <!-- CALLOUT -->
   <div class="callout">
-    <div class="callout-icon"></div>
-    <h3>The Simple Truth</h3>
-    <p>Teek does not collect, transmit, sell, or share your personal information with anyone. Everything you create stays on your device — permanently, privately, yours.</p>
+    <div class="callout-icon">ℹ️</div>
+    <h3>What Changed</h3>
+    <p>Teek used to be a fully offline tool app. We've now added a social platform — sign-up, profiles, posts, comments, messages, followers — which means some data is stored on our servers. This policy explains exactly what. The offline tools (notes, recipes, courses, media player, file manager, etc.) still run entirely on your device and never send data to us.</p>
   </div>
 
-  <!-- TOC -->
   <div class="toc">
     <div class="toc-title">Contents</div>
     <div class="toc-grid">
       <a href="#s1" class="toc-item"><span class="toc-num">1</span> Overview</a>
-      <a href="#s2" class="toc-item"><span class="toc-num">2</span> What We Don't Collect</a>
-      <a href="#s3" class="toc-item"><span class="toc-num">3</span> Local Storage</a>
-      <a href="#s4" class="toc-item"><span class="toc-num">4</span> Workspaces</a>
-      <a href="#s5" class="toc-item"><span class="toc-num">5</span> Code Preview</a>
-      <a href="#s6" class="toc-item"><span class="toc-num">6</span> Legal Drafting</a>
-      <a href="#s7" class="toc-item"><span class="toc-num">7</span> Business Hub</a>
-      <a href="#s8" class="toc-item"><span class="toc-num">8</span> Photo Gallery</a>
-      <a href="#s9" class="toc-item"><span class="toc-num">9</span> Music Player</a>
-      <a href="#s10" class="toc-item"><span class="toc-num">10</span> Videos</a>
-      <a href="#s11" class="toc-item"><span class="toc-num">11</span> File Manager</a>
-      <a href="#s12" class="toc-item"><span class="toc-num">12</span> Global Search</a>
-      <a href="#s13" class="toc-item"><span class="toc-num">13</span> Reading Time</a>
-      <a href="#s14" class="toc-item"><span class="toc-num">14</span> PDF &amp; QR</a>
-      <a href="#s15" class="toc-item"><span class="toc-num">15</span> Security &amp; PIN</a>
-      <a href="#s16" class="toc-item"><span class="toc-num">16</span> Drafts</a>
-      <a href="#s17" class="toc-item"><span class="toc-num">17</span> Third-Party</a>
-      <a href="#s18" class="toc-item"><span class="toc-num">18</span> No Internet</a>
+      <a href="#s2" class="toc-item"><span class="toc-num">2</span> Data We Collect</a>
+      <a href="#s3" class="toc-item"><span class="toc-num">3</span> Account &amp; Auth</a>
+      <a href="#s4" class="toc-item"><span class="toc-num">4</span> Social Data</a>
+      <a href="#s5" class="toc-item"><span class="toc-num">5</span> Messages</a>
+      <a href="#s6" class="toc-item"><span class="toc-num">6</span> Device &amp; Login</a>
+      <a href="#s7" class="toc-item"><span class="toc-num">7</span> Offline Tools</a>
+      <a href="#s8" class="toc-item"><span class="toc-num">8</span> Media &amp; Files</a>
+      <a href="#s9" class="toc-item"><span class="toc-num">9</span> Wallet &amp; Payments</a>
+      <a href="#s10" class="toc-item"><span class="toc-num">10</span> Cookies &amp; Tokens</a>
+      <a href="#s11" class="toc-item"><span class="toc-num">11</span> How We Use Data</a>
+      <a href="#s12" class="toc-item"><span class="toc-num">12</span> Sharing Data</a>
+      <a href="#s13" class="toc-item"><span class="toc-num">13</span> Third-Party</a>
+      <a href="#s14" class="toc-item"><span class="toc-num">14</span> Data Security</a>
+      <a href="#s15" class="toc-item"><span class="toc-num">15</span> Retention</a>
+      <a href="#s16" class="toc-item"><span class="toc-num">16</span> Your Rights</a>
+      <a href="#s17" class="toc-item"><span class="toc-num">17</span> Account Deletion</a>
+      <a href="#s18" class="toc-item"><span class="toc-num">18</span> Content Moderation</a>
       <a href="#s19" class="toc-item"><span class="toc-num">19</span> Children</a>
-      <a href="#s20" class="toc-item"><span class="toc-num">20</span> Your Rights</a>
-      <a href="#s21" class="toc-item"><span class="toc-num">21</span> Data Deletion</a>
+      <a href="#s20" class="toc-item"><span class="toc-num">20</span> International</a>
+      <a href="#s21" class="toc-item"><span class="toc-num">21</span> Changes</a>
       <a href="#s22" class="toc-item"><span class="toc-num">22</span> Contact</a>
-      <a href="#s23" class="toc-item"><span class="toc-num">23</span> Changes</a>
     </div>
   </div>
 
-  <!-- SECTIONS -->
+  <!-- 1 -->
   <div class="section" id="s1">
-    <div class="section-header">
-      <div class="section-num">1</div>
-      <h2>Overview</h2>
-    </div>
-    <p>Teek is built with a privacy-first philosophy. The app runs entirely offline on your device. We do not have servers, databases, or cloud storage. We cannot see your data even if we wanted to.</p>
+    <div class="section-header"><div class="section-num">1</div><h2>Overview</h2></div>
+    <p>Teek is an app with two parts: <strong>(1) a social platform</strong> where users can register, create profiles, post content, comment, message, and follow each other — and <strong>(2) a set of offline tools</strong> (notes, courses, recipes, scripts, business hub, media player, file manager, code preview, etc.) that run entirely on your device.</p>
+    <p>This policy explains what data we collect for each part. Sections 3–6 describe the social platform. Section 7 describes the offline tools, which are private by design.</p>
   </div>
 
+  <!-- 2 -->
   <div class="section" id="s2">
-    <div class="section-header">
-      <div class="section-num">2</div>
-      <h2>Information We Do NOT Collect</h2>
-    </div>
-    <p>Teek does not collect, request, or store any of the following:</p>
+    <div class="section-header"><div class="section-num">2</div><h2>Data We Collect</h2></div>
+    <p>When you register an account and use the social features of Teek, we collect:</p>
     <ul>
-      <li>Names, emails, or phone numbers</li>
-      <li>Profile photos or any images you upload</li>
-      <li>Work experience, education, or skills</li>
-      <li>Your notes, courses, sections, or reading activity</li>
-      <li>Your recipes, menus, or cost sheets</li>
-      <li>Your scripts, shot lists, or call sheets</li>
-      <li>Your code snippets or dev projects</li>
-      <li>Your legal cases, clients, or generated drafts</li>
-      <li>Your business clients, deals, proposals, or invoices</li>
-      <li>Your music library, playlists, or listening history</li>
-      <li>Your photos, videos, or camera roll content</li>
-      <li>Your imported files, downloads, or exports</li>
-      <li>Your assignments or study data</li>
-      <li>Your location or GPS data</li>
-      <li>Your contacts or phone book</li>
-      <li>Your PIN or any security credentials</li>
-      <li>Device identifiers or advertising IDs</li>
-      <li>Usage analytics, crash reports, or telemetry</li>
-      <li>Any data transmitted over the internet</li>
+      <li><strong>Account data</strong> — email, password (hashed), username, phone number (optional), first and last name</li>
+      <li><strong>Profile data</strong> — profile photo, cover photo, bio, category (e.g. "Tipster"), social media links you choose to add</li>
+      <li><strong>Content you create</strong> — posts (text, images, videos), comments, likes, bookmarks, shares, stories</li>
+      <li><strong>Messages</strong> — direct messages you send and receive</li>
+      <li><strong>Relationships</strong> — who you follow and who follows you</li>
+      <li><strong>Notifications</strong> — alerts you received or that were sent to you</li>
+      <li><strong>Device &amp; security</strong> — device model, brand, OS version, app activity on the device, IP address, login timestamps</li>
+      <li><strong>Preferences</strong> — settings, last activity, account status</li>
     </ul>
+    <p>You can choose not to provide optional data (phone, social links, bio), but the social platform requires at minimum an email, password, and username.</p>
   </div>
 
+  <!-- 3 -->
   <div class="section" id="s3">
-    <div class="section-header">
-      <div class="section-num">3</div>
-      <h2>Data Storage — 100% On Your Device</h2>
-    </div>
-    <p>All information you enter is stored locally inside your device's private app storage using a private SQLite database. This includes:</p>
-    <ul>
-      <li>Profile information (names, titles, bios, photos)</li>
-      <li>Work experience, education, and skills</li>
-      <li>Recommendations, certifications, projects, and languages</li>
-      <li>Notes you write</li>
-      <li>Courses and sections you create</li>
-      <li>Recipes, menus, and cost sheets</li>
-      <li>Scripts, shot lists, and call sheets</li>
-      <li>Code snippets and dev projects</li>
-      <li>Legal cases, clients, and generated drafts</li>
-      <li>Business clients, deals, proposals, and invoices</li>
-      <li>Firm branding (if you set it for legal or business exports)</li>
-      <li>Assignments and study data</li>
-      <li>Favourited photos and videos</li>
-      <li>Imported music and audio files</li>
-      <li>Imported files and downloaded content</li>
-      <li>Reading time tracked while you are inside a section</li>
-      <li>Your 4-digit PIN (stored as a SHA-256 hash, never in plain text)</li>
-    </ul>
-    <p>This data never leaves your device unless you explicitly choose to share it (e.g., exporting a PDF or showing a QR code).</p>
+    <div class="section-header"><div class="section-num">3</div><h2>Account &amp; Authentication</h2></div>
+    <p>To sign in, you provide an email (or username or phone) and a password. We store a <strong>hashed</strong> version of your password using industry-standard hashing — we never store the plaintext password.</p>
+    <p>When you log in successfully, we issue you an <strong>authentication token</strong> that is stored on your device and sent with each request to prove who you are. Tokens expire automatically and can be revoked when you log out or delete your account.</p>
+    <p>For security, when you sign in from a new device we send you an email notification with the device name and location (based on IP). This is a safety feature, not marketing.</p>
   </div>
 
-  <div class="section accent-card" id="s4">
-    <div class="section-header">
-      <div class="section-num">4</div>
-      <h2>Workspaces</h2>
-    </div>
-    <p>Teek adapts itself to your profession. You can type your profession (e.g., "Chef", "Software Engineer", "Lawyer", "Film Director", "Business Owner", "Student") and Teek organizes your workspace with the right tools for your work.</p>
-    <ul>
-      <li>Your profession is stored only on your device</li>
-      <li>It is never transmitted anywhere</li>
-      <li>You can change it at any time in Settings</li>
-      <li>The workspace is a purely local layout — no data collection is involved</li>
-    </ul>
+  <!-- 4 -->
+  <div class="section" id="s4">
+    <div class="section-header"><div class="section-num">4</div><h2>Social Data</h2></div>
+    <p>Everything you post publicly — posts, comments, likes, shares, followers, your profile — is visible to other users of Teek. Do not post anything you want to keep private.</p>
+    <p>When you delete a post or comment, it is removed from public view immediately and permanently deleted from our servers within 30 days (unless you also delete your account, in which case the retention rules in Section 15 apply).</p>
+    <p>Your <strong>email, phone number, and password</strong> are never shown to other users. Only your username, name, bio, photo, category, and social links are public.</p>
   </div>
 
+  <!-- 5 -->
   <div class="section" id="s5">
-    <div class="section-header">
-      <div class="section-num">5</div>
-      <h2>Code Preview</h2>
-    </div>
-    <p>Teek includes an offline code preview for HTML, CSS, JavaScript, SVG, and Markdown snippets. When you tap "Preview":</p>
-    <ul>
-      <li>The code is rendered inside a sandboxed view (WebView) on your device</li>
-      <li>No internet connection is used or required</li>
-      <li>No code is uploaded, transmitted, or executed on any server</li>
-      <li>Your code never leaves your device</li>
-      <li>The preview is generated entirely locally and stored only in your device's temporary memory</li>
-    </ul>
+    <div class="section-header"><div class="section-num">5</div><h2>Messages</h2></div>
+    <p>Direct messages you send and receive are stored on our servers so both you and the recipient can view them. Messages are not end-to-end encrypted. They are transmitted over HTTPS (encrypted in transit) and stored in our database.</p>
+    <p>We do not read your messages except when legally compelled or when investigating a report of abuse in accordance with Section 18.</p>
   </div>
 
+  <!-- 6 -->
   <div class="section" id="s6">
-    <div class="section-header">
-      <div class="section-num">6</div>
-      <h2>Legal Drafting</h2>
-    </div>
-    <p>The Legal workspace includes a guided drafting assistant with 40 document templates (client briefs, letters of demand, statements of claim, contracts, etc.).</p>
+    <div class="section-header"><div class="section-num">6</div><h2>Device &amp; Login Information</h2></div>
+    <p>For security and multi-device session management, when you log in we collect:</p>
     <ul>
-      <li>All templates and generated drafts are stored only on your device</li>
-      <li>Draft generation happens entirely offline — no AI service, no internet, no server</li>
-      <li>Your firm branding (name, address, contact) is stored locally and used only in the PDFs you export</li>
-      <li>No legal content is ever transmitted anywhere</li>
+      <li>Device model, brand, and OS version</li>
+      <li>IP address (recorded at login)</li>
+      <li>Login timestamp</li>
+      <li>A device identifier used only to detect new-device logins</li>
     </ul>
+    <p>This data is used to notify you of new logins and to protect your account. It is not used for advertising.</p>
   </div>
 
+  <!-- 7 -->
   <div class="section accent-card" id="s7">
-    <div class="section-header">
-      <div class="section-num">7</div>
-      <h2>Business Hub</h2>
-    </div>
-    <p>The Business workspace includes a client management system with four tools:</p>
-    <ul>
-      <li><strong>Clients</strong> — company, contact person, email, phone, address, industry, notes</li>
-      <li><strong>Deals</strong> — pipeline tracking with stages (Lead, Contacted, Proposal, Negotiation, Won, Lost), value, expected close date</li>
-      <li><strong>Proposals</strong> — title, client, body, amount, status, validity period</li>
-      <li><strong>Invoices</strong> — invoice number, client, line items with quantities and prices, total, status, due date</li>
-    </ul>
-    <p>All business data is stored exclusively on your device. When you export a proposal or an invoice as a PDF:</p>
-    <ul>
-      <li>The PDF is generated entirely on your device</li>
-      <li>Your firm branding is applied only at the moment of export</li>
-      <li>Nothing is uploaded to any server</li>
-      <li>Sharing happens through your device's native share sheet</li>
-    </ul>
+    <div class="section-header"><div class="section-num">7</div><h2>Offline Tools</h2></div>
+    <p>The offline tools in Teek — notes, courses, recipes, scripts, code preview, legal drafting, business hub, file manager, music player, video browser, photo gallery, global search, reading time, drafts, PIN lock — operate <strong>entirely on your device</strong>. Data you create in these tools is stored in your device's private SQLite database and is never transmitted to our servers.</p>
+    <p>We cannot see what you write in these tools. If you uninstall the app, this data is gone permanently because we never had a copy.</p>
   </div>
 
+  <!-- 8 -->
   <div class="section" id="s8">
-    <div class="section-header">
-      <div class="section-num">8</div>
-      <h2>Photo Gallery</h2>
-    </div>
-    <p>Teek includes an in-app photo gallery that displays the photos already on your device. When you open the gallery:</p>
-    <ul>
-      <li>Teek requests permission to read your photos</li>
-      <li>Photos are read-only and displayed inside the app</li>
-      <li>You can favourite photos; the list of favourites is stored only on your device</li>
-      <li>Photos are never uploaded, transmitted, or modified</li>
-      <li>You can revoke photo access at any time in your device settings</li>
-    </ul>
-    <p>Teek does not access your camera roll for any other purpose.</p>
+    <div class="section-header"><div class="section-num">8</div><h2>Media &amp; Files</h2></div>
+    <p><strong>Content you upload to the social platform</strong> (post images, videos, profile photos, cover photos, stories) is stored on our servers so other users can see it. We keep it until you delete the post/profile or delete your account.</p>
+    <p><strong>Media and files in the offline tools</strong> (photos you browse, videos you watch, music you import, files in the file manager) are accessed read-only or copied into the app's private storage on your device. They never leave your device.</p>
   </div>
 
+  <!-- 9 -->
   <div class="section" id="s9">
-    <div class="section-header">
-      <div class="section-num">9</div>
-      <h2>Music Player</h2>
-    </div>
-    <p>Teek includes an in-app music library and player. You import audio files into Teek, and the app can play them, show album art, and continue playback in the background with lock screen controls.</p>
+    <div class="section-header"><div class="section-num">9</div><h2>Wallet &amp; Payments</h2></div>
+    <p>If you use wallet top-up, withdrawals, subscriptions, or shop features, we store:</p>
     <ul>
-      <li>Imported audio files are copied into Teek's private storage on your device</li>
-      <li>Playback history is not tracked or transmitted</li>
-      <li>Your favourites and playlists are stored only on your device</li>
-      <li>Metadata (title, artist, album, cover art) is read directly from your files</li>
-      <li>No audio is ever uploaded, streamed, or transmitted</li>
+      <li>Wallet balance and transaction history</li>
+      <li>Bank name, account name, and account number (only the ones you provide for withdrawals)</li>
+      <li>Reference IDs from our payment processor(s)</li>
     </ul>
+    <p><strong>We do not store your card details or bank credentials.</strong> All card and bank processing is handled by licensed third-party payment providers (e.g. Flutterwave). We only receive a confirmation of successful payment and a reference ID.</p>
+    <p>Transaction records are kept for 5 years for legal and tax compliance even after account deletion, but are anonymized so they cannot be tied back to you personally.</p>
   </div>
 
+  <!-- 10 -->
   <div class="section" id="s10">
-    <div class="section-header">
-      <div class="section-num">10</div>
-      <h2>Videos</h2>
-    </div>
-    <p>Teek includes an in-app video browser that lists the videos already on your device. When you tap a video, it plays in your device's native video player.</p>
-    <ul>
-      <li>Videos are read-only and never uploaded or modified</li>
-      <li>Video thumbnails are generated locally on your device</li>
-      <li>Your favourites are stored only on your device</li>
-      <li>You can revoke video access at any time in your device settings</li>
-    </ul>
+    <div class="section-header"><div class="section-num">10</div><h2>Cookies, Tokens &amp; Sessions</h2></div>
+    <p>On the mobile app, we use <strong>authentication tokens</strong> stored in your device's secure storage instead of cookies. These tokens are what keep you signed in between app launches.</p>
+    <p>If you use the web version of Teek (naijaprimetip.com), we use session cookies necessary for login. We do not use tracking cookies or advertising cookies on any platform.</p>
   </div>
 
+  <!-- 11 -->
   <div class="section" id="s11">
-    <div class="section-header">
-      <div class="section-num">11</div>
-      <h2>File Manager</h2>
-    </div>
-    <p>Teek includes a file manager that organizes files inside Teek's own storage — Downloads, Exports, Attachments, and Recycle Bin.</p>
+    <div class="section-header"><div class="section-num">11</div><h2>How We Use Your Data</h2></div>
+    <p>We use the data described above to:</p>
     <ul>
-      <li>Files you import into Teek are copied into Teek's private storage on your device</li>
-      <li>Files you delete are moved to the Recycle Bin (soft delete) and can be restored</li>
-      <li>Files you empty from the Recycle Bin are permanently deleted</li>
-      <li>PDFs you export are saved in Teek's Exports folder</li>
-      <li>Nothing is uploaded to any server — sharing happens via your device's share sheet</li>
+      <li>Create and secure your account</li>
+      <li>Show your profile, posts, comments, and messages to other users as you intend</li>
+      <li>Deliver notifications and alerts to you</li>
+      <li>Detect and prevent fraud, abuse, and unauthorized account access</li>
+      <li>Provide customer support when you contact us</li>
+      <li>Comply with legal obligations</li>
+      <li>Improve the app (aggregated, non-personal usage only)</li>
     </ul>
-    <p>Teek does not access files outside its own private storage except through the system file picker, and only when you explicitly choose a file to import.</p>
+    <p>We do not sell your personal data. We do not use it for advertising.</p>
   </div>
 
-  <div class="section accent-card" id="s12">
-    <div class="section-header">
-      <div class="section-num">12</div>
-      <h2>Global Search</h2>
-    </div>
-    <p>Teek includes a global search that finds content across everything in the app — notes, profiles, courses, recipes, legal cases, business clients, and files.</p>
+  <!-- 12 -->
+  <div class="section" id="s12">
+    <div class="section-header"><div class="section-num">12</div><h2>Sharing Your Data</h2></div>
+    <p>We do not share your personal data except:</p>
     <ul>
-      <li>Search runs entirely on your device — no queries are sent anywhere</li>
-      <li>Search indexes are kept in memory and are never uploaded</li>
-      <li>There is no search history transmitted, and no analytics</li>
-      <li>Recent items shown on the search screen are read directly from your local database</li>
+      <li><strong>With other users</strong> — when you post content, comment, send a message, or follow someone, that action is visible to the intended recipient(s)</li>
+      <li><strong>With service providers</strong> — hosting, email delivery, and payment processing, under contracts that prevent them from using your data for their own purposes</li>
+      <li><strong>For legal compliance</strong> — if required by law, court order, or to protect the rights and safety of Teek or its users</li>
+      <li><strong>In a business transfer</strong> — if Teek is sold or merged, your data may be transferred as part of that transaction, and you will be notified</li>
     </ul>
   </div>
 
+  <!-- 13 -->
   <div class="section" id="s13">
-    <div class="section-header">
-      <div class="section-num">13</div>
-      <h2>Reading Time Tracking</h2>
-    </div>
-    <p>When you are inside a section (a page of a course), Teek measures how long you spend reading. This is used to show you your reading progress and total study time.</p>
+    <div class="section-header"><div class="section-num">13</div><h2>Third-Party Services</h2></div>
+    <p>Teek uses the following third-party services to operate the social platform:</p>
     <ul>
-      <li>This data is stored only on your device</li>
-      <li>It is never transmitted anywhere</li>
-      <li>Reading pauses automatically when you leave the app</li>
-      <li>You can delete it by deleting the section or course</li>
+      <li><strong>Payment processor</strong> (Flutterwave or similar) for wallet top-up and withdrawals — subject to their own privacy policies</li>
+      <li><strong>Email delivery</strong> for verification codes, password resets, and new-login alerts</li>
+      <li><strong>Hosting</strong> for our API servers and database</li>
     </ul>
+    <p>We do <strong>not</strong> use Google Analytics, Firebase Analytics, Facebook Pixel, or any other tracking/analytics SDK. There is no advertising SDK in Teek.</p>
   </div>
 
+  <!-- 14 -->
   <div class="section" id="s14">
-    <div class="section-header">
-      <div class="section-num">14</div>
-      <h2>PDF &amp; QR Sharing</h2>
-    </div>
-    <p>You may choose to share your profile, a legal draft, a business proposal, or an invoice as a PDF. You may also share your profile as a QR code. When you do:</p>
+    <div class="section-header"><div class="section-num">14</div><h2>Data Security</h2></div>
+    <p>We take security seriously. Specifically:</p>
     <ul>
-      <li>The PDF file is generated entirely on your device</li>
-      <li>The QR code contains only the information you have chosen to make public</li>
-      <li>You control exactly what is included</li>
-      <li>Nothing is uploaded to any server</li>
-      <li>Sharing happens through your device's native share sheet (WhatsApp, Email, Bluetooth, etc.)</li>
+      <li>Passwords are hashed with industry-standard algorithms and are never stored in plain text</li>
+      <li>All communication between the app and our servers uses HTTPS/TLS encryption</li>
+      <li>Authentication tokens are stored securely on your device and transmitted only over HTTPS</li>
+      <li>New-device logins are flagged and sent to your email</li>
+      <li>Database access is restricted to necessary personnel</li>
     </ul>
-    <p>Once you share a file, its privacy is determined by the app or service you share it with.</p>
+    <p>No system is 100% secure. If you suspect unauthorized access, change your password immediately and contact us at the email in Section 22.</p>
   </div>
 
+  <!-- 15 -->
   <div class="section" id="s15">
-    <div class="section-header">
-      <div class="section-num">15</div>
-      <h2>Security Features &amp; PIN</h2>
-    </div>
-    <p>Teek includes an optional 4-digit PIN lock. When enabled:</p>
+    <div class="section-header"><div class="section-num">15</div><h2>Data Retention</h2></div>
+    <p>We retain your data for as long as your account is active. Specific retention windows:</p>
     <ul>
-      <li>The PIN is hashed using SHA-256 before storage</li>
-      <li>The original PIN is never saved anywhere</li>
-      <li>The app locks when opened after being fully closed</li>
-      <li>Only a correct PIN unlocks your data</li>
+      <li><strong>Account data, posts, comments, messages, followers</strong> — while your account exists, plus 30 days after deletion request</li>
+      <li><strong>Transaction records</strong> — 5 years after deletion (anonymized, for tax/legal compliance)</li>
+      <li><strong>Abuse reports and moderation logs</strong> — 90 days after resolution</li>
+      <li><strong>Server logs (IP, request path)</strong> — 30 days</li>
     </ul>
-    <p>This means someone who gains physical access to your unlocked device still cannot easily view your Teek data.</p>
+    <p>Data in the offline tools is under your control and is deleted the moment you delete the item or uninstall the app.</p>
   </div>
 
+  <!-- 16 -->
   <div class="section" id="s16">
-    <div class="section-header">
-      <div class="section-num">16</div>
-      <h2>Drafts &amp; Auto-Save</h2>
-    </div>
-    <p>While you are writing a note, creating a profile, a course, a recipe, a script, a snippet, a project, a legal case, a legal draft, a business client, deal, proposal, or invoice, Teek saves your work-in-progress as a draft on your device. This protects you from losing content if the app is closed unexpectedly.</p>
+    <div class="section-header"><div class="section-num">16</div><h2>Your Rights</h2></div>
+    <p>Under GDPR, CCPA, Nigeria's NDPR, and similar regulations, you have the right to:</p>
     <ul>
-      <li>Drafts are stored only on your device</li>
-      <li>Drafts are cleared automatically when you save</li>
-      <li>You can discard a draft at any time from the dashboard</li>
-      <li>Drafts are never transmitted anywhere</li>
+      <li><strong>Access</strong> — request a copy of your personal data</li>
+      <li><strong>Correct</strong> — update any inaccurate data (most of it you can edit yourself in the app)</li>
+      <li><strong>Delete</strong> — request deletion of your account and data (see Section 17)</li>
+      <li><strong>Port</strong> — receive a machine-readable copy of your data</li>
+      <li><strong>Object / restrict</strong> — ask us to limit how we use your data</li>
+      <li><strong>Withdraw consent</strong> — where processing is based on consent</li>
     </ul>
+    <p>To exercise any right, email us at the address in Section 22. We will respond within 30 days.</p>
   </div>
 
-  <div class="section" id="s17">
-    <div class="section-header">
-      <div class="section-num">17</div>
-      <h2>Third-Party Services</h2>
-    </div>
-    <p>Teek does NOT use any third-party analytics, advertising, tracking, or crash-reporting services. There are no SDKs from Google Analytics, Firebase, Facebook, or any other tracking provider.</p>
+  <!-- 17 -->
+  <div class="section warn-card" id="s17">
+    <div class="section-header"><div class="section-num">17</div><h2>Account Deletion</h2></div>
+    <p>You can delete your account at any time directly from the app:</p>
+    <ul>
+      <li>Open the app and sign in</li>
+      <li>Tap your profile icon → <strong>Delete Account</strong></li>
+      <li>Type <strong>DELETE</strong> and enter your password</li>
+      <li>Tap <strong>Delete My Account</strong></li>
+    </ul>
+    <p>Deletion is <strong>scheduled for 30 days</strong>. If you log back in within that window, the deletion is cancelled and your account is fully restored. After 30 days, all your personal data (profile, posts, comments, messages, followers, notifications, social links) is permanently removed. Transaction records remain anonymized for 5 years for legal compliance.</p>
+    <p>Full details: <a href="https://rockyhelpersfoundation-boop.github.io/teek-delete-account/" style="color:var(--accent);font-weight:600;">teek-delete-account</a></p>
   </div>
 
+  <!-- 18 -->
   <div class="section" id="s18">
-    <div class="section-header">
-      <div class="section-num">18</div>
-      <h2>Internet Permission</h2>
-    </div>
-    <p>Teek does not request the Android INTERNET permission. This is a technical guarantee that the app cannot transmit your data anywhere — even accidentally. The app works fully in airplane mode.</p>
-    <p>The code preview feature runs entirely offline through the device's built-in WebView engine. No internet connection is required or used.</p>
+    <div class="section-header"><div class="section-num">18</div><h2>Content Moderation</h2></div>
+    <p>To keep Teek safe, we may review content (posts, messages, profiles) that is reported as abusive, illegal, or in violation of our Terms of Service. Moderation is performed by trained staff and is limited to what is necessary to respond to a specific report.</p>
+    <p>If you post content that violates our terms or the law, we may remove the content and/or suspend your account. Repeated violations will result in permanent account removal.</p>
   </div>
 
+  <!-- 19 -->
   <div class="section highlight-card" id="s19">
-    <div class="section-header">
-      <div class="section-num">19</div>
-      <h2>Children's Privacy</h2>
-    </div>
-    <p>Teek does not knowingly collect any personal information from children under 13. Because the app collects no data at all, it is compliant with COPPA (Children's Online Privacy Protection Act) and similar regulations worldwide.</p>
+    <div class="section-header"><div class="section-num">19</div><h2>Children's Privacy</h2></div>
+    <p>Teek is not intended for children under 13. We do not knowingly collect data from children under 13. If we learn that a user is under 13, we will delete the account and all associated data. If you believe a child has created an account, contact us immediately.</p>
   </div>
 
+  <!-- 20 -->
   <div class="section" id="s20">
-    <div class="section-header">
-      <div class="section-num">20</div>
-      <h2>Your Rights (GDPR / CCPA)</h2>
-    </div>
-    <p>Because Teek does not collect or process any personal data on our servers, there is no data for us to access, correct, or delete. All data exists solely on your device and is fully under your control. You can:</p>
-    <ul>
-      <li>Delete any profile, note, course, recipe, script, snippet, legal case, legal draft, business client, deal, proposal, or invoice at any time</li>
-      <li>Export your profile, legal drafts, business proposals, or invoices as PDF at any time</li>
-      <li>Empty the Recycle Bin to permanently delete imported files</li>
-      <li>Uninstall the app to remove all data</li>
-    </ul>
-    <p>Under GDPR, CCPA, and similar regulations, you have the right to access, correct, and delete your personal data — and Teek gives you those rights by default, permanently.</p>
+    <div class="section-header"><div class="section-num">20</div><h2>International Users</h2></div>
+    <p>Our servers are located in Nigeria. If you are accessing Teek from outside Nigeria, your data will be transferred to and processed in Nigeria, which may have different data protection laws than your country. By using Teek, you consent to this transfer.</p>
+    <p>For users in the EU/EEA, we rely on standard contractual clauses and your explicit consent for this cross-border transfer.</p>
   </div>
 
+  <!-- 21 -->
   <div class="section" id="s21">
-    <div class="section-header">
-      <div class="section-num">21</div>
-      <h2>Data Deletion</h2>
-    </div>
-    <p>To delete all Teek data:</p>
-    <ul>
-      <li>Delete individual items inside the app (profiles, notes, courses, recipes, scripts, snippets, legal cases, legal drafts, business clients, deals, proposals, invoices)</li>
-      <li>Discard any pending drafts from the dashboard</li>
-      <li>Empty the Recycle Bin from the Files screen</li>
-      <li>Or uninstall the app from your device</li>
-    </ul>
-    <p>Uninstalling removes the app's private database and all associated files (including imported music, photos, videos, and exported PDFs). There is no cloud backup to delete because there is no cloud.</p>
+    <div class="section-header"><div class="section-num">21</div><h2>Changes to This Policy</h2></div>
+    <p>If we update this policy, the new version will replace this page and show an updated "Last updated" date at the top. For material changes (new categories of data, new third parties), we will notify you in-app before the change takes effect. Continued use of the app after an update constitutes acceptance of the revised policy.</p>
   </div>
 
+  <!-- 22 -->
   <div class="section" id="s22">
-    <div class="section-header">
-      <div class="section-num">22</div>
-      <h2>Contact</h2>
-    </div>
-    <p>For questions about this privacy policy, contact:<br><br>
-    <strong>Email:</strong> teekapp@gmail.com<br>
-    <strong>Developer:</strong> Teek<br><br>
-    We will respond within 7 business days.</p>
-  </div>
-
-  <div class="section" id="s23">
-    <div class="section-header">
-      <div class="section-num">23</div>
-      <h2>Changes to This Policy</h2>
-    </div>
-    <p>If we ever update this privacy policy, the new version will be included in the next app update and will show an updated "Last Updated" date at the top of this page. Continued use of the app after an update constitutes acceptance of the revised policy.</p>
+    <div class="section-header"><div class="section-num">22</div><h2>Contact</h2></div>
+    <p>For privacy questions, data access requests, or deletion requests:</p>
+    <p><strong>Email:</strong> teekapp@gmail.com<br>
+    <strong>Developer:</strong> Teek<br>
+    <strong>Location:</strong> Nigeria<br><br>
+    We respond within 7 business days.</p>
   </div>
 
 </div>
 
-<!-- ============ FOOTER ============ -->
 <footer class="footer">
   <div class="brand">
     <span class="brand-icon">T</span>
@@ -793,6 +673,7 @@
   </div>
   <div class="footer-links">
     <a href="#s1">Privacy</a>
+    <a href="https://rockyhelpersfoundation-boop.github.io/teek-delete-account/">Delete Account</a>
     <a href="https://github.com/rockyhelpersfoundation-boop/teek-privacy">Source</a>
   </div>
   <p>© 2026 Teek · Made with love in Nigeria</p>
